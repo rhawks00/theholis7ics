@@ -31,7 +31,7 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center max-w-3xl w-full">
         <div className="mb-8">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white leading-none overflow-hidden" style={{ lineHeight: '0.9' }}>
+          <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-none overflow-hidden md:whitespace-nowrap" style={{ lineHeight: '0.9' }}>
             {titleLetters.map((letter, i) => (
               <motion.span
                 key={i}
