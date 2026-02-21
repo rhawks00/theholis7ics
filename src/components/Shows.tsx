@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
-import { Calendar, AlertCircle } from 'lucide-react';
+import { AlertCircle } from 'lucide-react';
+import { FaRegMap } from 'react-icons/fa';
 
 interface CalendarEvent {
   id: string;
@@ -27,13 +28,13 @@ interface Show {
 }
 
 export function Shows() {
-  //const [events, setEvents] = useState<Show[]>([]);
+  const [events, setEvents] = useState<Show[]>([]);
   const [shows, setShows] = useState<Show[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
 
-  const CALENDAR_ID = 'YOUR_CALENDAR_ID@group.calendar.google.com';
-  const API_KEY = 'YOUR_GOOGLE_API_KEY';
+  const CALENDAR_ID = 'cdfee52ddec6e012bca5740ab724e10321abc71062b257917d22b165de2326e1@group.calendar.google.com';
+  const API_KEY = 'AIzaSyA0xfbLGBkmXQSYVu9zosCYLC69_-ONFzs';
 
   useEffect(() => {
     fetchCalendarEvents();
@@ -44,13 +45,13 @@ export function Shows() {
       setLoading(true);
       setError('');
 
-      if (API_KEY === 'YOUR_GOOGLE_API_KEY' || !API_KEY) {
+      if (!API_KEY) {
         setError('Google Calendar API key not configured. Please see setup instructions.');
         setLoading(false);
         return;
       }
 
-      if (CALENDAR_ID === 'YOUR_CALENDAR_ID@group.calendar.google.com' || !CALENDAR_ID) {
+      if (!CALENDAR_ID) {
         setError('Google Calendar ID not configured. Please see setup instructions.');
         setLoading(false);
         return;
@@ -104,14 +105,10 @@ export function Shows() {
     }
   };
 
-  const refreshEvents = (): void => {
-    fetchCalendarEvents();
-  };
-
   if (loading) {
     return (
-      <section id="shows" className="px-4 py-20">
-        <div className="max-w-3xl mx-auto">
+      <section id="shows" className="px-4 py-20 flex items-center justify-center px-4 py-20">
+        <div className="max-w-3xl mx-auto w-full">
           <h2 className="text-5xl font-black text-white mb-16 text-center pb-4">Upcoming Gigs</h2>
           <div className="p-12 text-center backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl">
             <div className="animate-spin rounded-full h-12 w-12 border-t-2 border-orange-400 mx-auto mb-4"></div>
@@ -124,7 +121,7 @@ export function Shows() {
 
   if (error) {
     return (
-      <section id="shows" className="px-4 py-20">
+      <section id="shows" className="px-4 py-20 flex items-center justify-center px-4 py-20">
         <div className="max-w-6xl mx-auto w-full">
           <h2 className="text-5xl font-black text-white mb-16 text-center pb-4">Upcoming Gigs</h2>
           <div className="p-12 backdrop-blur-sm bg-red-500/10 border border-red-500/30 rounded-xl">
@@ -142,26 +139,16 @@ export function Shows() {
   }
 
   return (
-    <section id="shows" className="px-4 py-20">
+    <section id="shows" className="px-4 py-20 flex items-center justify-center px-4 py-20">
       <div className="max-w-3xl mx-auto">
-        <div className="flex items-center justify-between mb-16">
-          <h2 className="text-5xl font-black text-white">Tour Dates</h2>
-          <button
-            onClick={refreshEvents}
-            className="flex items-center gap-2 px-5 py-3 bg-gradient-to-r from-orange-500 to-orange-600 hover:from-orange-600 hover:to-orange-700 text-white font-bold rounded-xl transition transform hover:scale-105"
-          >
-            <Calendar className="w-5 h-5" />
-            Refresh
-          </button>
-        </div>
+        <h2 className="text-5xl font-black text-white mb-16 text-center pb-4">Upcoming Gigs</h2>
 
         {shows.length === 0 ? (
           <div className="p-12 text-center backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl">
-            <Calendar className="w-12 h-12 text-gray-400 mx-auto mb-4" />
             <p className="text-gray-300 text-lg">No upcoming shows scheduled. Check back soon!</p>
           </div>
         ) : (
-          <div className="space-y-4">
+          <div className="flex flex-col gap-2 py-4">
             {shows.map(show => (
               <div
                 key={show.id}
@@ -195,9 +182,9 @@ export function Shows() {
                         href={`https://www.google.com/maps/search/${encodeURIComponent(show.location)}`}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex px-4 py-2 bg-gradient-to-r from-cyan-500 to-cyan-600 hover:from-cyan-600 hover:to-cyan-700 text-white font-bold rounded-lg transition text-sm"
+                        className="inline-flex px-4 py-2 text-white font-bold rounded-lg transition text-sm hover:text-orange-400 transition-transform hover:scale-110 "
                       >
-                        Map
+                        <FaRegMap className="w-8 h-8" />
                       </a>
                     </div>
                   )}
@@ -206,12 +193,6 @@ export function Shows() {
             ))}
           </div>
         )}
-
-        <div className="mt-8 p-4 backdrop-blur-sm bg-blue-500/10 border border-blue-500/30 rounded-lg">
-          <p className="text-blue-200 text-sm">
-            💡 <strong>Tip:</strong> Add events to your Google Calendar and they'll automatically appear here!
-          </p>
-        </div>
       </div>
     </section>
   );

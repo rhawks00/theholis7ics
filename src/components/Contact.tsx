@@ -10,7 +10,7 @@ export function Contact() {
   ];
 
   return (
-    <section id="socials" className="px-4 py-20">
+    <section id="socials" className="px-4 py-20 flex items-center justify-center">
       <div className="max-w-6xl mx-auto w-full">
         <div className="text-center mb-16">
           <h2 className="text-5xl font-black text-white mb-4">Socials</h2>
