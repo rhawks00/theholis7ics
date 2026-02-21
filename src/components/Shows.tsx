@@ -27,7 +27,7 @@ interface Show {
 }
 
 export function Shows() {
-  const [events, setEvents] = useState<Show[]>([]);
+  //const [events, setEvents] = useState<Show[]>([]);
   const [shows, setShows] = useState<Show[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
   const [error, setError] = useState<string>('');
