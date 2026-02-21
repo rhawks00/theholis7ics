@@ -1,6 +1,17 @@
 import { motion } from 'framer-motion';
+import { useState, useEffect } from 'react';
 
 export function Hero() {
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   const titleVariants = {
     hidden: { opacity: 0, y: 20 },
     visible: (i: number) => ({
@@ -20,7 +31,7 @@ export function Hero() {
     <section className="min-h-screen flex items-center justify-center px-4">
       <div className="text-center max-w-3xl w-full">
         <div className="mb-8">
-          <h1 className="text-8xl md:text-7xl font-black tracking-tighter text-white leading-tight overflow-hidden">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-black tracking-tighter text-white leading-none overflow-hidden" style={{ lineHeight: '0.9' }}>
             {titleLetters.map((letter, i) => (
               <motion.span
                 key={i}
@@ -28,7 +39,7 @@ export function Hero() {
                 variants={titleVariants}
                 initial="hidden"
                 animate="visible"
-                style={{ display: 'inline-block' }}
+                style={{ display: letter === ' ' && isMobile ? 'block' : 'inline-block' }}
               >
                 {letter === ' ' ? '\u00A0' : letter}
               </motion.span>
