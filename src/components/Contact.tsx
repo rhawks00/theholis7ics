@@ -6,7 +6,7 @@ export function Contact() {
     { name: 'Instagram', icon: FaInstagram, url: 'https://www.instagram.com/theholis7ics/' },
     { name: 'X (Twitter)', icon: FaTwitter, url: 'https://x.com/theholis7ics' },
     { name: 'Facebook', icon: FaFacebook, url: 'https://www.facebook.com/theholis7ics/' },
-    { name: 'Email', icon: MdEmail, url: 'mailto:contact@holis7ics.com' },
+    { name: 'Email', icon: MdEmail, url: 'mailto:saxophone4@hotmail.com' },
   ];
 
   return (
