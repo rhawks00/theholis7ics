@@ -5,10 +5,10 @@ import { FaDeezer } from "react-icons/fa";
 import { SiTidal } from "react-icons/si";
 
 export function Media() {
-  const video = { id: 1, title: 'Kiss Live', url: 'https://www.youtube.com/embed/XAA86XtZrSU' };
+  const video = { id: 1, title: 'Live Show', url: 'https://www.youtube.com/embed/KKtz-nAYlf8' };
 
   return (
-    <section id="media" className="flex items-center justify-center px-4 py-20">
+    <section id="media" className="flex items-center justify-center px-4 py-4">
       <div className="max-w-4xl mx-auto text-center w-full">
         <h2 className="text-5xl font-black text-white mb-16 pb-4">Hear Our Sound</h2>
         <div className="group rounded-2xl overflow-hidden backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/40 transition-all hover:bg-white/15 mb-12">

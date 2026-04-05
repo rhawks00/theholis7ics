@@ -6,6 +6,7 @@ import { Media } from './components/Media';
 import { Contact } from './components/Contact';
 import { Shows } from './components/Shows';
 import { Footer } from './components/Footer';
+//import { BandMembers } from './components/Bandmembers';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Header />
         <Hero />
         <About />
+        {/* <BandMembers /> */}
         <Media />
         <Shows />
         <Contact />
