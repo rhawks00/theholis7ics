@@ -28,10 +28,10 @@ export function Hero() {
   const titleLetters = 'The Holis7ics'.split('');
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-10 pt-32 md:pt-24">
+    <section className="min-h-screen flex items-center justify-center px-4 py-10 pt-56 md:pt-24">
       <div className="text-center max-w-3xl w-full">
         <div className="mb-8">
-          <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-none overflow-hidden md:whitespace-nowrap" style={{ lineHeight: '0.9' }}>
+          <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-none overflow-hidden md:whitespace-nowrap" style={{ lineHeight: '1.5' }}>
             {titleLetters.map((letter, i) => (
               <motion.span
                 key={i}

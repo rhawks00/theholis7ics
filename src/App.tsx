@@ -3,7 +3,7 @@ import { Header } from './components/Header';
 import { Hero } from './components/Hero';
 import { About } from './components/About';
 import { Media } from './components/Media';
-import { Contact } from './components/Contact';
+//import { Contact } from './components/Contact';
 import { Shows } from './components/Shows';
 import { Footer } from './components/Footer';
 //import { BandMembers } from './components/Bandmembers';
@@ -19,7 +19,6 @@ function App() {
         {/* <BandMembers /> */}
         <Media />
         <Shows />
-        <Contact />
         <Footer />
       </div>
     </div>
