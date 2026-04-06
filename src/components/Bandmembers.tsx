@@ -4,7 +4,7 @@ export function BandMembers() {
       id: 1,
       name: "Jeff 'Dog' Schmidgall",
       role: 'Guitar',
-      bio: `Jeff "Dog" Schmidgall was always surrounded by music from his mom and dad. Elvis was his first concert. He saw Randy Rhoads play guitar with Ozzy Osbourne and wanted to make people feel the way Randy made him feel with the sounds he created. Dog started playing guitar a few months before Rhoads died. In high school, he played in Second Generation, where he and Greg Brown first played together. He toured the United States & Canada as a guitar tech for Jim Dandy & Black Oak Arkansas 1988 to 1989.
+      bio: `Jeff 'Dog' Schmidgall was always surrounded by music from his mom and dad. Elvis was his first concert. He saw Randy Rhoads play guitar with Ozzy Osbourne and wanted to make people feel the way Randy made him feel with the sounds he created. Dog started playing guitar a few months before Rhoads died. In high school, he played in Second Generation, where he and Greg Brown first played together. He toured the United States & Canada as a guitar tech for Jim Dandy & Black Oak Arkansas 1988 to 1989.
             Dog returned home and assembled the band Raw Honey. After 10 years with Raw Honey, he played for several years with the blues group Bobbye King & The Ladies Choice Band. In the late 1990s, Dog joined the band Slow Traffic, where he first played with Jeff Neavor. He went on to play with The Mothership, Good to Go, Everybody and the Governor. In the band, Pink Sushi, he first played with Ty Bailey. He also played in the Dog & Dorann Show.
             In 2021, Dog reached out to Bailey, Brown, and Neavor and they put together The Holis7ics.`,
       image: '/images/Dog.jpg',
@@ -54,7 +54,7 @@ export function BandMembers() {
     {
       id: 7,
       name: "Jared Taylor",
-      role: 'Trumpet',
+      role: 'Trumpet/Flugelhorn, Vocals',
       bio: `Jared Taylor is a Peoria-area composer, trumpeter, and vocalist. A former student of Jeff Neavor and classmate of Colin Winkelmann, Jared now works with students at Morton High School during the fall while performing with The Holis7ics.
             In addition to his performance work, Jared composes for the Zephyr Brass Collective based in Denver, Colorado. He continues to develop his craft throughout the Midwest, with the goal of becoming a full-time composer and writer.`,
       image: '/images/JaredT.jpeg',
@@ -67,7 +67,6 @@ export function BandMembers() {
         <div className="text-center mb-24">
           <h2 className="text-5xl font-black text-white mb-4">Meet the Band</h2>
         </div>
-
         <div className="space-y-20 pt-10 ">
           {members.map((member, index) => (
             <div
