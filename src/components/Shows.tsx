@@ -106,7 +106,7 @@ export function Shows() {
 
   if (loading) {
     return (
-      <section id="shows" className="px-4 py-20 flex items-center justify-center px-4 py-20">
+      <section id="shows" className="px-4 py-12 flex items-center justify-center">
         <div className="max-w-3xl mx-auto w-full">
           <h2 className="text-5xl font-black text-white mb-16 text-center pb-4">Upcoming Gigs</h2>
           <div className="p-12 text-center backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl">
@@ -120,7 +120,7 @@ export function Shows() {
 
   if (error) {
     return (
-      <section id="shows" className="px-4 py-20 flex items-center justify-center px-4 py-20">
+      <section id="shows" className="px-4 py-12 flex items-center justify-center">
         <div className="max-w-6xl mx-auto w-full">
           <h2 className="text-5xl font-black text-white mb-16 text-center pb-4">Upcoming Gigs</h2>
           <div className="p-12 backdrop-blur-sm bg-red-500/10 border border-red-500/30 rounded-xl">
@@ -138,7 +138,7 @@ export function Shows() {
   }
 
   return (
-    <section id="shows" className="px-4 py-20 flex items-center justify-center px-4 py-20">
+    <section id="shows" className="px-4 py-6 flex items-center justify-center">
       <div className="max-w-3xl mx-auto">
         <h2 className="text-5xl font-black text-white mb-16 text-center pb-4">Upcoming Gigs</h2>
 

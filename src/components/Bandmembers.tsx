@@ -1,3 +1,5 @@
+import { useState } from 'react';
+
 export function BandMembers() {
   const members = [
     {
@@ -61,6 +63,15 @@ export function BandMembers() {
     },
   ];
 
+  const [expandedIds, setExpandedIds] = useState<number[]>([]);
+  const bioLimit = 800;
+
+  const toggleExpand = (id: number) => {
+    setExpandedIds(prev =>
+      prev.includes(id) ? prev.filter((item) => item !== id) : [...prev, id]
+    );
+  };
+
   return (
     <section id="members" className="px-4 py-20 flex justify-center">
       <div className="max-w-6xl w-full">
@@ -85,8 +96,21 @@ export function BandMembers() {
               {/* Content */}
               <div className="flex-1">
                 <h3 className="text-2xl md:text-3xl font-black text-white mb-2 text-center md:text-left">{member.name}</h3>
-                <p className="text-orange-400 font-bold text-base md:text-lg mb-4 text-center md:text-left">{member.role}</p>
-                <p className="text-xl text-gray-300 leading-relaxed text-left">{member.bio}</p>
+                <p className="text-orange-400 italic font-bold text-base md:text-lg mb-4 text-center md:text-left">{member.role}</p>
+                <p className="text-xl text-gray-300 leading-relaxed text-left">
+                  {member.bio.length > bioLimit && !expandedIds.includes(member.id)
+                    ? `${member.bio.slice(0, bioLimit).trim()}...`
+                    : member.bio}
+                </p>
+                {member.bio.length > bioLimit && (
+                  <button
+                    type="button"
+                    onClick={() => toggleExpand(member.id)}
+                    className="mt-3 text-sm font-semibold text-orange-400 hover:text-orange-300"
+                  >
+                    {expandedIds.includes(member.id) ? 'Show Less' : 'Show More'}
+                  </button>
+                )}
               </div>
             </div>
           ))}

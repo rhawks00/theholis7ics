@@ -21,11 +21,7 @@ export function Header() {
       element.scrollIntoView({ behavior: 'smooth' });
     }
   };
- /*
-          <button onClick={() => scrollToSection('band-members')} className="text-gray-300 hover:text-orange-400 transition font-medium text-sm px-2 py-2 cursor-pointer bg-none border-none">
-            Members
-          </button>
-          */
+
   return (
     <header 
       className="fixed top-0 left-0 right-0 z-50 p-6 transition-opacity pointer-events-none"
