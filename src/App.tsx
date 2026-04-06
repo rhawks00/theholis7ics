@@ -6,7 +6,7 @@ import { Media } from './components/Media';
 //import { Contact } from './components/Contact';
 import { Shows } from './components/Shows';
 import { Footer } from './components/Footer';
-//import { BandMembers } from './components/Bandmembers';
+import { BandMembers } from './components/Bandmembers';
 import { Divider } from './components/Divider';
 
 function App() {
@@ -18,8 +18,8 @@ function App() {
         <Hero />
         <Divider />
         <About />
+        <BandMembers />
         <Divider />
-        {/* <BandMembers /> */}
         <Media />
         <Divider />
         <Shows />

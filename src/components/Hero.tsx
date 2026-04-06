@@ -28,10 +28,16 @@ export function Hero() {
   const titleLetters = 'The Holis7ics'.split('');
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-10 pt-56 md:pt-24">
-      <div className="text-center max-w-3xl w-full">
+    <section className="min-h-screen flex items-center justify-center px-4 py-10 pt-4 md:pt-40">
+      <div className="text-center max-w-6xl w-full">
         <div className="mb-8">
-          <h1 className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-none overflow-hidden md:whitespace-nowrap" style={{ lineHeight: '1.5' }}>
+          <h1 
+            className="text-6xl sm:text-7xl md:text-7xl lg:text-8xl font-black tracking-tighter text-white leading-none overflow-hidden md:whitespace-nowrap" 
+            style={{ 
+              lineHeight: isMobile ? '1.3' : '1.5',
+              fontSize: isMobile ? '2.5rem' : undefined
+            }}
+          >
             {titleLetters.map((letter, i) => (
               <motion.span
                 key={i}
@@ -51,12 +57,9 @@ export function Hero() {
             src="/images/bandPhoto.jpg"
             alt="Hero"
             loading="lazy"
-            className="w-full max-w-3xl h-auto rounded-lg object-contain shadow-lg"
+            className="w-full max-w-full lg:max-w-[80rem] h-auto rounded-lg object-contain shadow-lg"
           />
         </div>
-        {/* <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
-          The Ambassadors of Love, Funk, and Roll
-        </p> */}
       </div>
     </section>
   );
