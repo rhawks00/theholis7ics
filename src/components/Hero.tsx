@@ -28,7 +28,7 @@ export function Hero() {
   const titleLetters = 'The Holis7ics'.split('');
 
   return (
-    <section className="min-h-screen flex items-center justify-center px-4 py-10 pt-4 md:pt-40">
+    <section className="min-h-screen flex items-center justify-center px-4 py-10 pt-4 md:pt-24">
       <div className="text-center max-w-6xl w-full">
         <div className="mb-8">
           <h1 

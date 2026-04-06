@@ -25,13 +25,13 @@ export function Media() {
         </div>
         <div className="flex items-center justify-center gap-4 md:gap-8 py-8 flex-wrap">
           <a 
-            href="https://open.spotify.com/artist/5aGwc6eYVVj1NQgcptq3vS" 
+            href="https://www.deezer.com/us/album/471953055" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-green-600 hover:bg-green-500 transition-colors shadow-lg"
-            title="Listen on Spotify"
+            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-purple-600 hover:bg-purple-500 transition-colors shadow-lg"
+            title="Listen on Deezer"
           >
-            <FaSpotify className="w-6 h-6 md:w-8 md:h-8 text-white" />
+            <FaDeezer className="w-6 h-6 md:w-8 md:h-8 text-white" />
           </a>
           <a 
             href="https://music.apple.com/us/artist/the-holis7ics/1645785381" 
@@ -43,28 +43,28 @@ export function Media() {
             <SiApplemusic className="w-6 h-6 md:w-8 md:h-8 text-white" />
           </a>
           <a 
+            href="https://open.spotify.com/artist/5aGwc6eYVVj1NQgcptq3vS" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-green-600 hover:bg-green-500 transition-colors shadow-lg"
+            title="Listen on Spotify"
+          >
+            <FaSpotify className="w-6 h-6 md:w-8 md:h-8 text-white" />
+          </a>
+          <a 
             href="https://music.youtube.com/playlist?list=OLAK5uy_lzZSIWBePZ8aL2ZhmlnltZdhSSi6jC0us&si=1AHjlIRGpf0rjsiq" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-pink-500 to-red-500 hover:from-pink-400 hover:to-red-400 transition-colors shadow-lg"
+            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-red-600 hover:bg-red-500 transition-colors shadow-lg"
             title="Listen on YouTube Music"
           >
             <SiYoutubemusic className="w-6 h-6 md:w-8 md:h-8 text-white" />
-          </a>
-           <a 
-            href="https://www.deezer.com/us/album/471953055" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-pink-500 to-red-500 hover:from-pink-400 hover:to-red-400 transition-colors shadow-lg"
-            title="Listen on Deezer"
-          >
-            <FaDeezer className="w-6 h-6 md:w-8 md:h-8 text-white" />
           </a>
           <a 
             href="https://tidal.com/album/308897105" 
             target="_blank" 
             rel="noopener noreferrer"
-            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-gradient-to-br from-pink-500 to-red-500 hover:from-pink-400 hover:to-red-400 transition-colors shadow-lg"
+            className="flex items-center justify-center w-12 h-12 md:w-16 md:h-16 rounded-full bg-black hover:bg-gray-800 transition-colors shadow-lg"
             title="Listen on Tidal"
           >
             <SiTidal className="w-6 h-6 md:w-8 md:h-8 text-white" />

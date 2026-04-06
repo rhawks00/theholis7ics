@@ -62,7 +62,7 @@ export function BandMembers() {
   ];
 
   return (
-    <section id="band-members" className="px-4 py-20 flex justify-center">
+    <section id="members" className="px-4 py-20 flex justify-center">
       <div className="max-w-6xl w-full">
         <div className="text-center mb-24">
           <h2 className="text-5xl font-black text-white mb-4">Meet the Band</h2>
