@@ -25,3 +25,22 @@
 .animation-delay-4000 {
   animation-delay: 4s;
 }
+
+@keyframes note-float {
+  0%, 100% {
+    transform: translateY(0px);
+    opacity: 0.6;
+  }
+  50% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+}
+
+.animate-note-float {
+  animation: none;
+}
+
+.group:hover .animate-note-float {
+  animation: note-float 1s ease-in-out forwards;
+}

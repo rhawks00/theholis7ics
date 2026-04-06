@@ -54,9 +54,9 @@ export function Hero() {
             className="w-full max-w-3xl h-auto rounded-lg object-contain shadow-lg"
           />
         </div>
-        <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
+        {/* <p className="text-xl md:text-2xl text-gray-200 mb-8 font-light">
           The Ambassadors of Love, Funk, and Roll
-        </p>
+        </p> */}
       </div>
     </section>
   );

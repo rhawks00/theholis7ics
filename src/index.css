@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Kaoly+Demo&display=swap');
 
 @font-face {
   font-family: 'Kaoly';
@@ -7,7 +8,7 @@
   font-style: normal;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@300;400;500;600;700;800&display=swap');
+
 
 html {
   scroll-behavior: smooth;
@@ -27,8 +28,7 @@ body {
 body {
   background-color: #000000;
   color: #ffffff;
-  font-family: 'Bodoni Moda', 'Bodoni', serif;
-  font-feature-settings: 'calt' on, 'ss01' on, 'swsh' on;
+  font-family: 'Kaoly Demo', serif;
 }
 
 h1, h2, h3, h4, h5, h6, nav {

@@ -7,6 +7,7 @@ import { Media } from './components/Media';
 import { Shows } from './components/Shows';
 import { Footer } from './components/Footer';
 //import { BandMembers } from './components/Bandmembers';
+import { Divider } from './components/Divider';
 
 function App() {
   return (
@@ -15,9 +16,12 @@ function App() {
       <div className="relative z-10">
         <Header />
         <Hero />
+        <Divider />
         <About />
+        <Divider />
         {/* <BandMembers /> */}
         <Media />
+        <Divider />
         <Shows />
         <Footer />
       </div>
