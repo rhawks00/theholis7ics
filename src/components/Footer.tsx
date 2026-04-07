@@ -33,8 +33,9 @@ export function Footer() {
             })}
           </div>
         </div>
-        <div className="pt-8 text-center text-gray-400 text-sm flex justify-center">
+        <div className="pt-8 text-center text-gray-400 text-sm flex flex-col gap-3 items-center justify-center">
           <p>&copy; {currentYear} The Holis7ics. All rights reserved.</p>
+          <p className="text-xs text-gray-500">Built by <a href="https://ryanhawks.com" target="_blank" rel="noopener noreferrer" className="text-orange-400 hover:text-white transition">Ryan Hawks</a></p>
         </div>
       </div>
     </footer>
