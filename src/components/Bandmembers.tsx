@@ -15,7 +15,10 @@ export function BandMembers() {
       id: 2,
       name: 'Jeff Neavor',
       role: 'Saxophone, Keys',
-      bio: '',
+      bio: `Jeff Neavor is a Peoria-area saxophonist, keyboardist, and former educator with over three decades of experience in music. Raised in a musical household, he began playing piano at age eight and later took up the saxophone, which he studied through college. He began playing with blues and jazz groups through the midwest at age 16. 
+            Jeff earned his Bachelor of Music Education from Millikin University and later his Master of Music Education from Illinois State University. During his 22-year career as a band director, he led the Morton High School Band to national recognition, including fourteen consecutive Illinois Class 2A State Championships, appearances as a Bands of America Grand National Semifinalists, a performance at the 2009 Presidential Inauguration, and the 2017 Sudler Shield Award from the John Philip Sousa Foundation.
+            While beginning his teaching career in 1997, Jeff played saxophones and keyboards with the band Slow Traffic, where he met Jeff “Dog” Schmidgall. Former students Colin Winkelmann and Jared Taylor now reunite with Jeff and Schmidgall in The Holis7ics.
+            Outside of The Holis7ics, Jeff is a financial advisor plays tenor sax with the River Valley Big Band, judges local music competitions, and serves on the Board of Directors of the Peoria Symphony Orchestra.`,
       image: '/images/JeffN.jpg',
     },
     {

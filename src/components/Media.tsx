@@ -11,7 +11,7 @@ export function Media() {
     <section id="media" className="flex items-center justify-center px-4 py-4">
       <div className="max-w-4xl mx-auto text-center w-full">
         <h2 className="text-5xl font-black text-white mb-16 pb-4">Hear Our Sound</h2>
-        <div className="group rounded-2xl overflow-hidden backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/40 transition-all hover:bg-white/15 mb-12">
+        <div className="group rounded-2xl overflow-hidden backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/40 transition-all hover:bg-white/15 mb-16">
           <div className="aspect-video bg-black/50 overflow-hidden">
             <iframe
               width="100%"
