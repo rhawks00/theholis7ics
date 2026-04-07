@@ -25,7 +25,8 @@ export function BandMembers() {
       id: 3,
       name: 'Colin Winkelmann',
       role: 'Drums',
-      bio: 'Colin drums winkelmann drums winkel yeah drums colin yep',
+      bio: `Colin Winkelmann is a lifelong drummer, starting private lessons at Flores Music at the age of 9 years old. Throughout his time at Morton High School, he played in various bands such as the concert band, marching band, jazz band, and pep band, even being directed by Jeff Neavor. In college, he went on to get a Master’s degree in Creative Technologies, focusing heavily on audio engineering and production. Through college, he was the drummer for local band Great Value Jesus, including playing live shows and being a studio drummer. He was a part of the Redbird Studios RSO, with the role of lead mixing and mastering engineer.  
+            He continues to produce music and sound design under his freelance business Kiin Creative, creating sound design elements for Green Hill Marching Band, mixing and mastering local artist’s works, and being a volunteer audiovisual engineer for Bloomington Normal non-profit concert organization pt.fwd. He makes his own music under the moniker kiin, producing mainly synth pop and electronic ambient music.`,
       image: '/images/ColinW.JPG',
     },
     {
