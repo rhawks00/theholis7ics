@@ -1,19 +1,19 @@
-import { useState, useEffect } from 'react';
+//import { useState, useEffect } from 'react';
 
 export function Header() {
-  const [opacity, setOpacity] = useState(1);
+  // const [opacity, setOpacity] = useState(1);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const scrollPosition = window.scrollY;
-      const maxScroll = 750;
-      const newOpacity = Math.max(0, 1 - scrollPosition / maxScroll);
-      setOpacity(newOpacity);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const scrollPosition = window.scrollY;
+  //     const maxScroll = 750;
+  //     const newOpacity = Math.max(0, 1 - scrollPosition / maxScroll);
+  //     setOpacity(newOpacity);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  //   window.addEventListener('scroll', handleScroll);
+  //   return () => window.removeEventListener('scroll', handleScroll);
+  // }, []);
 
   const scrollToSection = (id: string) => {
     const element = document.getElementById(id);
@@ -24,11 +24,10 @@ export function Header() {
 
   return (
     <header 
-      className="fixed top-0 left-0 right-0 z-50 p-6 transition-opacity pointer-events-none"
-      style={{ opacity }}
+      className="fixed top-0 left-0 right-0 z-50 p-6 bg-transparent"
     >
       <div className="max-w-7xl mx-auto flex items-center justify-center md:justify-between w-full">
-        <nav className={`flex items-center gap-8 ${opacity > 0 ? 'pointer-events-auto' : 'pointer-events-none'}`}>
+        <nav className="flex items-center gap-8 pointer-events-auto">
           <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-orange-400 transition font-medium text-sm px-2 py-2 cursor-pointer bg-none border-none">
             About
           </button>
