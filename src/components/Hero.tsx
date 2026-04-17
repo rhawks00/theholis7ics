@@ -10,8 +10,8 @@ export function Hero() {
   };
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 pt-40 md:pt-32 gap-26">
-      <div className="relative w-full max-w-sm md:max-w-lg lg:max-w-2xl xl:max-w-3xl h-auto">
+    <section className="min-h-screen flex flex-col items-center justify-center px-4 py-20 pt-40 md:pt-32 gap-22">
+      <div className="relative w-full max-w-sm md:max-w-md  h-auto">
         <img
           src="/images/logonotext.jpeg"
           alt="Band Photo"
