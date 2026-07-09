@@ -1,10 +1,24 @@
+import { motion } from 'framer-motion';
+
 export function About() {
   return (
     <section id="about" className="px-4 flex items-center justify-center">
       <div className="max-w-6xl mx-auto w-full">
-        <h2 className="text-5xl font-black text-white mb-16 text-center pb-12">About Us</h2>
+        <motion.h2
+          className="text-5xl font-black text-white mb-16 text-center pb-12"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >About Us</motion.h2>
         <div className="flex justify-center">
-          <div className="max-w-2xl">
+          <motion.div
+            className="max-w-2xl"
+            initial={{ opacity: 0, y: 24 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: '-60px' }}
+            transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
+          >
             <p className="text-xl text-gray-300 mb-6 leading-relaxed text-center">
               The Holis7ics are the Ambassadors of Love, Funk and Roll and are here to shake up your soul. 
               This seven-piece powerhouse fuses rock, funk, and soul into a high-voltage sound that's as fresh as it is 
@@ -13,8 +27,8 @@ export function About() {
               can't ignore. Their creative takes on "Holis7icized" covers will give you favorite new versions of classic 
               hits. The Holis7ics are more than a band, they're an experience.
             </p>
-          </div>
-          {/* 
+          </motion.div>
+          {/*
           <div className="bg-gradient-to-br from-orange-400/20 to-purple-600/20 rounded-lg p-8 backdrop-blur-sm border border-white/10 text-center">
             <h3 className="text-2xl font-black text-white mb-6">The Sound</h3>
             <ul className="space-y-3 text-gray-300 flex flex-col items-center justify-center">

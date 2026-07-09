@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { motion } from 'framer-motion';
 import { AlertCircle } from 'lucide-react';
 import { FaRegMap } from 'react-icons/fa';
 
@@ -140,7 +141,13 @@ export function Shows() {
   return (
     <section id="shows" className="px-4 py-6 flex items-center justify-center">
       <div className="max-w-3xl mx-auto">
-        <h2 className="text-5xl font-black text-white mb-16 text-center pb-4">Upcoming Gigs</h2>
+        <motion.h2
+          className="text-5xl font-black text-white mb-16 text-center pb-4"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >Upcoming Gigs</motion.h2>
 
         {shows.length === 0 ? (
           <div className="p-12 text-center backdrop-blur-sm bg-white/10 border border-white/20 rounded-xl">
@@ -148,10 +155,14 @@ export function Shows() {
           </div>
         ) : (
           <div className="flex flex-col gap-2 py-4">
-            {shows.map(show => (
-              <div
+            {shows.map((show, index) => (
+              <motion.div
                 key={show.id}
                 className="group p-6 backdrop-blur-sm bg-white/10 border border-white/20 hover:border-orange-400/50 rounded-xl transition-all hover:bg-white/15"
+                initial={{ opacity: 0, y: 24 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, margin: '-40px' }}
+                transition={{ duration: 0.5, ease: 'easeOut', delay: index * 0.08 }}
               >
                 <div className="flex flex-col md:flex-row md:items-start md:justify-between gap-4">
                   <div className="flex-shrink-0">
@@ -188,7 +199,7 @@ export function Shows() {
                     </div>
                   )}
                 </div>
-              </div>
+              </motion.div>
             ))}
           </div>
         )}

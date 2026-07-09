@@ -1,3 +1,4 @@
+import { motion } from 'framer-motion';
 import { FaSpotify } from 'react-icons/fa';
 import { SiApplemusic } from 'react-icons/si';
 import { SiYoutubemusic } from "react-icons/si";
@@ -10,8 +11,20 @@ export function Media() {
   return (
     <section id="media" className="flex items-center justify-center px-4 py-4">
       <div className="max-w-4xl mx-auto text-center w-full">
-        <h2 className="text-5xl font-black text-white mb-16 pb-4">Hear Our Sound</h2>
-        <div className="group rounded-2xl overflow-hidden backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/40 transition-all hover:bg-white/15 mb-16">
+        <motion.h2
+          className="text-5xl font-black text-white mb-16 pb-4"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >Hear Our Sound</motion.h2>
+        <motion.div
+          className="group rounded-2xl overflow-hidden backdrop-blur-sm bg-white/10 border border-white/20 hover:border-white/40 transition-all hover:bg-white/15 mb-16"
+          initial={{ opacity: 0, y: 24 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: 'easeOut', delay: 0.15 }}
+        >
           <div className="aspect-video bg-black/50 overflow-hidden">
             <iframe
               width="100%"
@@ -22,7 +35,7 @@ export function Media() {
               allowFullScreen
             />
           </div>
-        </div>
+        </motion.div>
         <div className="flex items-center justify-center gap-4 md:gap-8 py-8 flex-wrap">
           <a 
             href="https://www.deezer.com/us/album/471953055" 

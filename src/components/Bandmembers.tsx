@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { motion } from 'framer-motion';
 
 export function BandMembers() {
   const members = [
@@ -79,22 +80,35 @@ export function BandMembers() {
   return (
     <section id="members" className="px-4 py-20 flex justify-center">
       <div className="max-w-6xl w-full">
-        <div className="text-center mb-24">
+        <motion.div
+          className="text-center mb-24"
+          initial={{ opacity: 0, y: 32 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-60px' }}
+          transition={{ duration: 0.6, ease: 'easeOut' }}
+        >
           <h2 className="text-5xl font-black text-white mb-4">Meet the Band</h2>
-        </div>
+        </motion.div>
         <div className="space-y-20 pt-10 ">
           {members.map((member, index) => (
-            <div
+            <motion.div
               key={member.id}
               className={` py-4 group flex flex-col md:flex-row items-center gap-4 md:gap-12 ${index % 2 === 1 ? 'md:flex-row-reverse' : ''} `}
+              initial={{ opacity: 0, y: 48 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, margin: '-80px' }}
+              transition={{ duration: 0.6, ease: 'easeOut' }}
             >
               {/* Image Container */}
-              <div className="flex-shrink-0 w-80 h-80 md:w-[22rem] md:h-[22rem] lg:w-[32rem] lg:h-[32rem] rounded-lg overflow-hidden backdrop-blur-sm bg-white/10 border border-white/20 transition-all">
+              <div className="relative flex-shrink-0 w-80 h-80 md:w-[22rem] md:h-[22rem] lg:w-[32rem] lg:h-[32rem] rounded-lg overflow-hidden backdrop-blur-sm bg-white/10 border border-white/20 transition-all group/img">
                 <img
                   src={member.image}
                   alt={member.name}
-                  className="w-full h-full object-cover transition-transform duration-300"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover/img:scale-105"
                 />
+                <div className="absolute inset-0 flex items-end justify-center pb-6 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover/img:opacity-100 transition-opacity duration-300">
+                  <span className="text-orange-400 font-bold text-lg tracking-wide italic">{member.role}</span>
+                </div>
               </div>
 
               {/* Content */}
@@ -116,7 +130,7 @@ export function BandMembers() {
                   </button>
                 )}
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
