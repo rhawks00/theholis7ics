@@ -78,7 +78,7 @@ export function BandMembers() {
   };
 
   return (
-    <section id="members" className="px-4 py-20 flex justify-center">
+    <section id="members" className="px-4 py-16 flex justify-center">
       <div className="max-w-6xl w-full">
         <motion.div
           className="text-center mb-24"
@@ -115,7 +115,7 @@ export function BandMembers() {
               <div className="flex-1">
                 <h3 className="text-2xl md:text-3xl font-black text-white mb-2 text-center md:text-left">{member.name}</h3>
                 <p className="text-orange-400 italic font-bold text-base md:text-lg mb-4 text-center md:text-left">{member.role}</p>
-                <p className="text-xl text-gray-300 leading-relaxed text-left">
+                <p className="text-base md:text-xl text-gray-300 leading-relaxed text-left">
                   {member.bio.length > bioLimit && !expandedIds.includes(member.id)
                     ? `${member.bio.slice(0, bioLimit).trim()}...`
                     : member.bio}

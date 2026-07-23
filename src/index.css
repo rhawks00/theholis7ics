@@ -8,27 +8,31 @@
   font-style: normal;
 }
 
-html {
-  scroll-behavior: smooth;
-}
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
 
-* {
-  margin: 0;
-  box-sizing: border-box;
-}
+  *,
+  *::before,
+  *::after {
+    margin: 0;
+    box-sizing: border-box;
+  }
 
-html,
-body {
-  width: 100%;
-  height: 100%;
-}
+  html,
+  body {
+    width: 100%;
+    height: 100%;
+  }
 
-body {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: 'Kaoly Demo', serif;
-}
+  body {
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Kaoly Demo', serif;
+  }
 
-h1, h2, h4, h5, h6, nav {
-  font-family: 'Kaoly', serif;
+  h1, h2, h4, h5, h6, nav {
+    font-family: 'Kaoly', serif;
+  }
 }

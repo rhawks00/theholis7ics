@@ -1,7 +1,16 @@
 import { useState, useEffect, useRef } from 'react';
+import { Menu, X } from 'lucide-react';
+
+const NAV_ITEMS = [
+  { label: 'About', id: 'about' },
+  { label: 'Listen', id: 'media' },
+  { label: 'Shows', id: 'shows' },
+  { label: 'Socials', id: 'socials' },
+];
 
 export function Header() {
   const [visible, setVisible] = useState(true);
+  const [menuOpen, setMenuOpen] = useState(false);
   const hideTimer = useRef<ReturnType<typeof setTimeout> | null>(null);
 
   useEffect(() => {
@@ -26,34 +35,64 @@ export function Header() {
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
+    setMenuOpen(false);
   };
 
   return (
     <header
-      className="fixed top-0 left-0 right-0 z-50 p-6 bg-transparent transition-opacity duration-700"
-      style={{ opacity: visible ? 1 : 0, pointerEvents: visible ? 'auto' : 'none' }}
+      className="fixed top-0 left-0 right-0 z-50 p-4 md:p-6 backdrop-blur-md bg-black/30 transition-opacity duration-700"
+      style={{ opacity: visible || menuOpen ? 1 : 0, pointerEvents: visible || menuOpen ? 'auto' : 'none' }}
     >
-      <div className="max-w-7xl mx-auto flex items-center justify-between w-full">
+      <div className="flex items-center justify-between w-full">
         <button
-          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-          className="text-white font-bold text-lg tracking-widest cursor-pointer bg-none border-none hover:text-orange-400 transition-colors"
+          onClick={() => { window.scrollTo({ top: 0, behavior: 'smooth' }); setMenuOpen(false); }}
+          className="text-white font-bold text-lg tracking-widest cursor-pointer bg-transparent border-none hover:text-orange-400 transition-colors"
           style={{ fontFamily: "'Kaoly', serif" }}
         >
           The Holis7ics
         </button>
-        <nav className="flex items-center gap-8 pointer-events-auto">
-          <button onClick={() => scrollToSection('about')} className="text-gray-300 hover:text-orange-400 transition font-medium text-sm px-2 py-2 cursor-pointer bg-none border-none">
-            About
-          </button>
-          <button onClick={() => scrollToSection('media')} className="text-gray-300 hover:text-orange-400 transition font-medium text-sm px-2 py-2 cursor-pointer bg-none border-none">
-            Listen
-          </button>
-          <button onClick={() => scrollToSection('shows')} className="text-gray-300 hover:text-orange-400 transition font-medium text-sm px-2 py-2 cursor-pointer bg-none border-none">
-            Shows
-          </button>
-          <button onClick={() => scrollToSection('socials')} className="text-gray-300 hover:text-orange-400 transition font-medium text-sm px-2 py-2 cursor-pointer bg-none border-none">
-            Socials
-          </button>
+
+        {/* Desktop nav */}
+        <nav className="hidden md:flex items-center gap-8">
+          {NAV_ITEMS.map(item => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-gray-300 hover:text-orange-400 transition font-medium text-sm px-2 py-2 cursor-pointer bg-transparent border-none"
+            >
+              {item.label}
+            </button>
+          ))}
+        </nav>
+
+        {/* Mobile hamburger */}
+        <button
+          onClick={() => setMenuOpen(prev => !prev)}
+          className="md:hidden text-white hover:text-orange-400 transition-colors cursor-pointer bg-transparent border-none p-1"
+          aria-label="Toggle menu"
+        >
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile dropdown */}
+      <div
+        className="md:hidden overflow-hidden transition-all duration-300 ease-in-out"
+        style={{
+          maxHeight: menuOpen ? `${NAV_ITEMS.length * 56}px` : '0px',
+          opacity: menuOpen ? 1 : 0,
+        }}
+      >
+        <nav className="flex flex-col gap-2 pt-4 pb-2">
+          {NAV_ITEMS.map(item => (
+            <button
+              key={item.id}
+              onClick={() => scrollToSection(item.id)}
+              className="text-gray-300 hover:text-orange-400 transition font-medium text-base py-3 px-2 text-left cursor-pointer bg-transparent border-none"
+            >
+              {item.label}
+            </button>
+          ))}
         </nav>
       </div>
     </header>
