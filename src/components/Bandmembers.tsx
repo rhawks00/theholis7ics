@@ -5,9 +5,9 @@ export function BandMembers() {
   const members = [
     {
       id: 1,
-      name: "Jeff 'Dog' Schmidgall",
+      name: 'Jeff "Dog" Schmidgall',
       role: 'Guitar',
-      bio: `Jeff 'Dog' Schmidgall was always surrounded by music from his mom and dad. Elvis was his first concert. He saw Randy Rhoads play guitar with Ozzy Osbourne and wanted to make people feel the way Randy made him feel with the sounds he created. Dog started playing guitar a few months before Rhoads died. In high school, he played in Second Generation, where he and Greg Brown first played together. He toured the United States & Canada as a guitar tech for Jim Dandy & Black Oak Arkansas 1988 to 1989.
+      bio: `Jeff "Dog" Schmidgall was always surrounded by music from his mom and dad. Elvis was his first concert. He saw Randy Rhoads play guitar with Ozzy Osbourne and wanted to make people feel the way Randy made him feel with the sounds he created. Dog started playing guitar a few months before Rhoads died. In high school, he played in Second Generation, where he and Greg Brown first played together. He toured the United States & Canada as a guitar tech for Jim Dandy & Black Oak Arkansas 1988 to 1989.
             Dog returned home and assembled the band Raw Honey. After 10 years with Raw Honey, he played for several years with the blues group Bobbye King & The Ladies Choice Band. In the late 1990s, Dog joined the band Slow Traffic, where he first played with Jeff Neavor. He went on to play with The Mothership, Good to Go, Everybody and the Governor. In the band, Pink Sushi, he first played with Ty Bailey. He also played in the Dog & Dorann Show.
             In 2021, Dog reached out to Bailey, Brown, and Neavor and they put together The Holis7ics.`,
       image: '/images/Dog.jpg',
@@ -24,11 +24,12 @@ export function BandMembers() {
     },
     {
       id: 3,
-      name: 'Colin Winkelmann',
-      role: 'Drums',
-      bio: `Colin Winkelmann is a lifelong drummer, starting private lessons at Flores Music at the age of 9 years old. Throughout his time at Morton High School, he played in various bands such as the concert band, marching band, jazz band, and pep band, even being directed by Jeff Neavor. In college, he went on to get a Master’s degree in Creative Technologies, focusing heavily on audio engineering and production. Through college, he was the drummer for local band Great Value Jesus, including playing live shows and being a studio drummer. He was a part of the Redbird Studios RSO, with the role of lead mixing and mastering engineer.  
-            He continues to produce music and sound design under his freelance business Kiin Creative, creating sound design elements for Green Hill Marching Band, mixing and mastering local artist’s works, and being a volunteer audiovisual engineer for Bloomington Normal non-profit concert organization pt.fwd. He makes his own music under the moniker kiin, producing mainly synth pop and electronic ambient music.`,
-      image: '/images/ColinW.JPG',
+      name: 'Michael "Iggy" Dickson',
+      role: 'Drums, Vocals',
+      bio: `Michael “Iggy” Dickson has been making noise since grade school—turning pencils into drumsticks, desks into drum kits, and driving teachers, classmates, and his family just a little crazy in the process. Luckily, they all survived, and Iggy went on to earn a Bachelor of Music in Percussion from Illinois State University, performing with groups like the Illinois Symphony Orchestra and helping premiere works by modern composers.
+            A marching percussion veteran, he’s taught and written for high school drumlines, instructed the Illinois State University drumline, and worked with The Phantom Regiment Cadets. But the drum set is where he truly lives. Gigging since age 15, Iggy has played everything from punk and metal to pit orchestras, rock, pop, funk, and country, performing with bands including The Seed Band, The Blue Moon Project, Sofa Shark, The Megasonics, Phanierae and the Soul Shakers, The Joe Stamm Band, and Whiskey Bent.
+            Now he’s back behind the kit with The Holis7ics, ready to bring the rock, pop, and funk he loves—and maybe a few extra taps on whatever surface is nearby.`,
+      image: '/images/Iggy.JPG',
     },
     {
       id: 4,
